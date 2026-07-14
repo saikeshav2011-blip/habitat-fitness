@@ -7,11 +7,31 @@ import {
   StyleSheet
 } from "react-native";
 
-
 export default function WorkoutBuilder() {
 
   const [workoutName, setWorkoutName] = useState("");
   const [exerciseName, setExerciseName] = useState("");
+  const [workouts, setWorkouts] = useState([]);
+
+
+  function addExercise() {
+
+    if (exerciseName.trim() === "") {
+      return;
+    }
+
+    setWorkouts([
+      ...workouts,
+      {
+        name: exerciseName,
+        workTime: 30,
+        restTime: 15
+      }
+    ]);
+
+    setExerciseName("");
+  }
+
 
   return (
 
@@ -32,37 +52,46 @@ export default function WorkoutBuilder() {
 
       <TextInput
         style={styles.input}
-        placeholder="Exercise Name"
+        placeholder="Add Exercise"
         value={exerciseName}
         onChangeText={setExerciseName}
       />
 
 
-      <Pressable style={styles.button}>
+      <Pressable
+        style={styles.button}
+        onPress={addExercise}
+      >
         <Text style={styles.buttonText}>
           Add Exercise
         </Text>
       </Pressable>
 
 
+      <Text style={styles.subtitle}>
+        Exercises:
+      </Text>
+
+
+      {workouts.map((exercise, index) => (
+
+        <Text key={index} style={styles.exercise}>
+          {index + 1}. {exercise.name}
+          {"\n"}
+          Work: {exercise.workTime}s
+          Rest: {exercise.restTime}s
+        </Text>
+
+      ))}
+
+
       <Pressable style={styles.button}>
+
         <Text style={styles.buttonText}>
           Save Workout
         </Text>
+
       </Pressable>
-
-
-      <Text style={styles.preview}>
-        Workout Preview:
-        {"\n\n"}
-
-        {workoutName}
-
-        {"\n"}
-
-        {exerciseName}
-
-      </Text>
 
 
     </View>
@@ -79,13 +108,17 @@ const styles = StyleSheet.create({
     justifyContent:"center"
   },
 
-
   title:{
     fontSize:32,
     fontWeight:"bold",
     marginBottom:30
   },
 
+  subtitle:{
+    marginTop:25,
+    fontSize:20,
+    fontWeight:"bold"
+  },
 
   input:{
     borderWidth:1,
@@ -94,24 +127,21 @@ const styles = StyleSheet.create({
     borderRadius:10
   },
 
-
   button:{
     padding:15,
-    marginTop:10,
+    marginTop:15,
     borderRadius:10,
     alignItems:"center"
   },
-
 
   buttonText:{
     fontSize:18,
     fontWeight:"bold"
   },
 
-
-  preview:{
-    marginTop:30,
-    fontSize:18
+  exercise:{
+    marginTop:15,
+    fontSize:16
   }
 
 });
