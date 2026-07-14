@@ -2,40 +2,35 @@ import React, { useState } from "react";
 import {
   View,
   Text,
-  TextInput,
   Pressable,
-  StyleSheet
+  TextInput,
+  StyleSheet,
+  ScrollView
 } from "react-native";
+
+import { publicExercises } from "../data";
+
 
 export default function WorkoutBuilder() {
 
   const [workoutName, setWorkoutName] = useState("");
-  const [exerciseName, setExerciseName] = useState("");
-  const [workouts, setWorkouts] = useState([]);
+  const [selectedExercises, setSelectedExercises] = useState([]);
 
 
-  function addExercise() {
+  function addExercise(exercise) {
 
-    if (exerciseName.trim() === "") {
-      return;
-    }
-
-    setWorkouts([
-      ...workouts,
-      {
-        name: exerciseName,
-        workTime: 30,
-        restTime: 15
-      }
+    setSelectedExercises([
+      ...selectedExercises,
+      exercise
     ]);
 
-    setExerciseName("");
   }
 
 
   return (
 
-    <View style={styles.container}>
+    <ScrollView style={styles.container}>
+
 
       <Text style={styles.title}>
         Create Workout
@@ -43,105 +38,166 @@ export default function WorkoutBuilder() {
 
 
       <TextInput
+
         style={styles.input}
+
         placeholder="Workout Name"
+
         value={workoutName}
+
         onChangeText={setWorkoutName}
+
       />
 
 
-      <TextInput
-        style={styles.input}
-        placeholder="Add Exercise"
-        value={exerciseName}
-        onChangeText={setExerciseName}
-      />
-
-
-      <Pressable
-        style={styles.button}
-        onPress={addExercise}
-      >
-        <Text style={styles.buttonText}>
-          Add Exercise
-        </Text>
-      </Pressable>
-
-
-      <Text style={styles.subtitle}>
-        Exercises:
+      <Text style={styles.sectionTitle}>
+        Exercise Library
       </Text>
 
 
-      {workouts.map((exercise, index) => (
+      {
+        publicExercises.map((exercise) => (
 
-        <Text key={index} style={styles.exercise}>
-          {index + 1}. {exercise.name}
-          {"\n"}
-          Work: {exercise.workTime}s
-          Rest: {exercise.restTime}s
-        </Text>
+          <Pressable
 
-      ))}
+            key={exercise.id}
+
+            style={styles.exerciseCard}
+
+            onPress={() => addExercise(exercise)}
+
+          >
+
+            <Text style={styles.exerciseName}>
+              {exercise.name}
+            </Text>
 
 
-      <Pressable style={styles.button}>
+            <Text>
+              Muscles:
+              {" "}
+              {exercise.muscles.join(", ")}
+            </Text>
 
-        <Text style={styles.buttonText}>
+
+            <Text>
+              Equipment:
+              {" "}
+              {exercise.equipment.required.join(", ")}
+            </Text>
+
+
+          </Pressable>
+
+        ))
+      }
+
+
+
+      <Text style={styles.sectionTitle}>
+        Your Workout
+      </Text>
+
+
+      {
+        selectedExercises.map((exercise, index) => (
+
+          <View
+            key={index}
+            style={styles.selectedCard}
+          >
+
+            <Text>
+              {index + 1}. {exercise.name}
+            </Text>
+
+          </View>
+
+        ))
+      }
+
+
+
+      <Pressable style={styles.saveButton}>
+
+        <Text style={styles.saveText}>
           Save Workout
         </Text>
 
       </Pressable>
 
 
-    </View>
+    </ScrollView>
 
   );
+
 }
+
 
 
 const styles = StyleSheet.create({
 
   container:{
     flex:1,
-    padding:25,
-    justifyContent:"center"
+    padding:20
   },
+
 
   title:{
     fontSize:32,
     fontWeight:"bold",
-    marginBottom:30
+    marginBottom:20
   },
 
-  subtitle:{
+
+  sectionTitle:{
+    fontSize:22,
+    fontWeight:"bold",
     marginTop:25,
-    fontSize:20,
-    fontWeight:"bold"
+    marginBottom:10
   },
+
 
   input:{
     borderWidth:1,
     padding:15,
-    marginBottom:15,
     borderRadius:10
   },
 
-  button:{
+
+  exerciseCard:{
+    borderWidth:1,
     padding:15,
-    marginTop:15,
-    borderRadius:10,
-    alignItems:"center"
+    borderRadius:12,
+    marginBottom:10
   },
 
-  buttonText:{
+
+  exerciseName:{
     fontSize:18,
     fontWeight:"bold"
   },
 
-  exercise:{
-    marginTop:15,
-    fontSize:16
+
+  selectedCard:{
+    padding:12,
+    borderWidth:1,
+    borderRadius:10,
+    marginBottom:8
+  },
+
+
+  saveButton:{
+    padding:18,
+    marginTop:25,
+    borderRadius:12,
+    alignItems:"center"
+  },
+
+
+  saveText:{
+    fontSize:18,
+    fontWeight:"bold"
   }
 
 });
