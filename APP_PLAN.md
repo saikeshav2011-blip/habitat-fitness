@@ -2,9 +2,11 @@
 
 ## Goal
 
-Habitᵃᵗ Fitness is an interval workout app designed to act as a personal fitness coach. Users create workouts, follow timed exercise routines, learn proper exercise techniques, and receive workout guidance even when they leave the app.
+Habitᵃᵗ Fitness is an interval workout app designed to act as a personal fitness coach.
 
-The goal is to make workouts easier to follow by showing users what exercise they are doing, how long remains, and what comes next without constantly opening their phone.
+Users can create workouts, discover exercises, learn proper movement techniques, track progress, and receive workout guidance even when they leave the app.
+
+The goal is to make workouts simple to follow while helping users build consistent fitness habits.
 
 ---
 
@@ -12,233 +14,286 @@ The goal is to make workouts easier to follow by showing users what exercise the
 
 ## 1. Workout Creation
 
-Users can create custom workouts by adding exercises.
+Users can create custom workouts.
 
 Features:
 
-* Create personalized workouts
-* Add exercises by name
-* Set work duration
-* Set rest duration
-* Arrange exercise order
-* Edit workouts
-* Save workouts for future use
+- Create workout names
+- Add exercises
+- Set work duration
+- Set rest duration
+- Arrange exercise order
+- Edit workouts
+- Save workouts
+- Restart previous workouts
+
+Users can choose exercises from:
+- Public Exercise Library
+- Their own private exercises
 
 Example:
 
 Morning HIIT
 
 1. Jumping Jacks
-
-   * Work: 30 seconds
-   * Rest: 15 seconds
+   - Work: 30 seconds
+   - Rest: 15 seconds
 
 2. Squats
-
-   * Work: 45 seconds
-   * Rest: 20 seconds
-
-3. Push-ups
-
-   * Work: 30 seconds
-   * Rest: 15 seconds
+   - Work: 45 seconds
+   - Rest: 15 seconds
 
 ---
 
-# 2. Active Workout Timer
+# 2. Exercise Library
 
-The main workout experience.
+The Exercise Library teaches users how exercises work.
 
-Features:
+## Public Exercises
 
-* Countdown timer
-* Current exercise display
-* Exercise number and total exercises
-* Workout progress tracking
-* Pause workout
-* Skip exercise
-* End workout
-* Show next exercise preview
+Public exercises are available to all users.
 
-Example:
+Each exercise may include:
 
-Current:
+- Exercise name
+- Description
+- Instructions
+- Target muscle groups
+- Exercise categories
+- Difficulty
+- Variations
+- Equipment needed
+- Images or animations
 
-Exercise 3/10
-
-Squats
-
-00:25 remaining
-
-Next:
-
-Push-ups
-
----
-
-# 3. Workout Companion Outside the App
-
-A main feature of Habitᵃᵗ Fitness.
-
-The workout continues guiding users when they leave the app.
-
-Designed for situations where users:
-
-* Listen to Spotify
-* Use other apps
-* Lock their phone
-* Put their phone down during workouts
-
-Features:
-
-* Background workout notifications
-* Lock screen workout display
-* Current exercise name
-* Exercise number
-* Countdown timer
-* Next exercise preview
-* Exercise illustration/cartoon image when supported
-* Quick return to workout
-
-Example:
-
-Habitᵃᵗ Fitness
-
-Exercise 4/12
-
-LUNGES
-
-00:18 remaining
-
-Next:
-
-PLANK
-
----
-
-# 4. Lock Screen Workout Experience
-
-The lock screen should act as a workout coach.
-
-Features:
-
-* Display current exercise
-* Display remaining time
-* Display next exercise
-* Allow quick access back into workout
-* Support workout controls when available
-
-Goal:
-
-Users should be able to complete workouts without repeatedly unlocking their phone.
-
----
-
-# 5. Exercise Library
-
-An educational section explaining common exercises.
-
-The library helps users understand exercises but does not automatically create workouts.
-
-Each exercise includes:
-
-* Exercise name
-* How to perform the exercise
-* Step-by-step instructions
-* Targeted muscle groups
-* Common mistakes
-* Exercise variations
-* Difficulty level
+Information fields are optional when needed.
 
 Examples:
 
 Push-ups:
 
-* Standard push-up
-* Knee push-up
-* Incline push-up
-* Diamond push-up
+Muscles:
+- Chest
+- Shoulders
+- Triceps
+- Core
 
-Squats:
+Categories:
+- Strength
+- Upper Body
+- No Equipment
 
-* Bodyweight squat
-* Jump squat
-* Split squat
+Variations:
+- Knee Push-up
+- Incline Push-up
+- Diamond Push-up
 
----
-
-# 6. Saved Workouts
-
-Users can save workouts and reuse them.
-
-Features:
-
-* Save custom workouts
-* Rename workouts
-* Edit workouts
-* Delete workouts
-* Quickly restart favorite workouts
-* View completed workouts
-
-Examples:
-
-* Morning HIIT
-* Upper Body Workout
-* Quick 10 Minute Workout
 
 ---
 
-# 7. Social Sharing & Motivation
+# 3. Private User Exercises
 
-Users can share workouts and celebrate progress with friends.
+Users can create their own exercises.
 
-Features:
+Private exercises are only visible to that user.
 
-* Friend connections
-* Share completed workouts
-* Share workout duration
-* Share estimated calories burned
-* Share exercise streaks
-* Workout completion celebrations
-* Encouragement from friends
-* Achievement milestones
+Users can enter:
 
-Examples:
+Required:
+- Exercise name
 
-🎉 Completed Morning HIIT!
+Optional:
+- Description
+- Instructions
+- Muscle groups targeted
+- Exercise categories
+- Difficulty
+- Equipment
+- Variations
+- Images
 
-⏱ 20 minute workout
+Example:
 
-🔥 Estimated 250 calories burned
+Custom Exercise:
 
-💪 5 workout streak
+Resistance Band Door Row
 
-Friends can:
+Muscles:
+- Back
+- Biceps
 
-* Like completed workouts
-* Send encouragement
-* View shared milestones
+Category:
+- Strength
+
+Visibility:
+Private
+
 
 ---
 
-# 8. Workout Completion & Congratulations System
+# 4. Exercise Submission System
 
-The app should celebrate progress and help users build habits.
+Users can optionally submit private exercises to become public exercises.
+
+Flow:
+
+User creates exercise
+
+↓
+
+Exercise remains private
+
+↓
+
+User chooses "Submit to Habitᵃᵗ Fitness"
+
+↓
+
+Admin reviews submission
+
+↓
+
+Admin can:
+- Approve
+- Edit
+- Add information
+- Reject
+
+Approved exercises become part of the public library.
+
+---
+
+# 5. Sample Workout System
+
+Users can choose generated workouts.
+
+Options:
+
+## Time
+
+- 5 minutes
+- 10 minutes
+- 15 minutes
+- 20 minutes
+- 30 minutes
+- 45+ minutes
+
+
+## Goal
+
+- Full Body
+- Strength
+- Cardio
+- Fatigue/conditioning
+- Mobility
+
+
+## Target Area
+
+- Chest
+- Back
+- Arms
+- Shoulders
+- Legs
+- Core
+- Full Body
+
+
+## Equipment
+
+- No Equipment
+- Dumbbells
+- Resistance Bands
+- Gym Equipment
+
+
+The app creates workouts based on user preferences.
+
+---
+
+# 6. Active Workout Timer
 
 Features:
 
-* Workout completion messages
-* Milestones
-* Streak celebrations
-* Achievement badges
+- Countdown timer
+- Current exercise
+- Exercise number
+- Progress
+- Pause
+- Skip
+- End workout
+- Next exercise preview
+
+
+---
+
+# 7. Workout Companion Outside the App
+
+A major feature of Habitᵃᵗ Fitness.
+
+Users can continue workouts while:
+
+- Listening to Spotify
+- Using other apps
+- Locking their phone
+
+
+Features:
+
+- Background workout notifications
+- Lock screen workout display
+- Current exercise
+- Timer
+- Next exercise
+- Exercise image when supported
+
+
+---
+
+# 8. Saved Workouts
+
+Users can:
+
+- Save workouts
+- Rename workouts
+- Edit workouts
+- Delete workouts
+- Repeat favorite workouts
+
+
+---
+
+# 9. Workout Completion & Motivation
+
+After workouts:
+
+Show:
+
+- Time completed
+- Exercises completed
+- Estimated calories burned
+- Achievements
+- Congratulations messages
+
 
 Examples:
 
-"🔥 Great job! You completed another workout."
+"Great job! Another workout completed."
 
-"🏆 New milestone reached: 10 workouts completed."
+"You built your habit today."
 
-"💪 You built another day of your fitness habit."
+---
+
+# 10. Social Features
+
+Future features:
+
+- Friends
+- Share completed workouts
+- Share calories burned estimates
+- Share streaks
+- Encourage friends
+- Challenges
+
 
 ---
 
@@ -246,59 +301,46 @@ Examples:
 
 1. Home Screen
 2. Workout Builder
-3. Active Workout Timer
-4. Saved Workouts
-5. Exercise Library
-6. Workout Background Notification System
-7. Lock Screen Workout Experience
-8. Workout Completion Summary
+3. Exercise Library
+4. Private Exercise Creator
+5. Saved Workouts
+6. Active Workout Timer
+7. Workout Summary
+8. Lock Screen Workout Experience
 
----
-
-# Future Features
-
-* Workout history
-* Progress tracking
-* Streak tracking
-* Achievement system
-* More exercise animations
-* Personalized workout recommendations
-* Cloud syncing
-* Friend challenges
-* Leaderboards
-* Wearable integration
-* Heart rate tracking
 
 ---
 
 # Development Priority
 
-## Phase 1: Core Beta
+## Phase 1: Personal Beta
 
-* Home Screen
-* Workout Builder
-* Exercise data structure
-* Saved workouts
-* Active workout timer
+- Home Screen
+- Exercise database
+- Workout Builder
+- Private exercises
+- Saved workouts
+- Active timer
 
-## Phase 2: Workout Experience
 
-* Background notifications
-* Lock screen workout experience
-* Exercise illustrations
-* Workout completion summary
+## Phase 2: Smart Workouts
 
-## Phase 3: Education
+- Sample workouts
+- Muscle targeting
+- Time-based workout creation
+- Equipment filtering
 
-* Exercise library
-* Exercise instructions
-* Muscle groups
-* Variations
 
-## Phase 4: Social Features
+## Phase 3: Workout Companion
 
-* Friends
-* Sharing workouts
-* Calories burned estimates
-* Congratulations system
-* Challenges
+- Background notifications
+- Lock screen experience
+- Exercise images
+
+
+## Phase 4: Community
+
+- Exercise submissions
+- Friends
+- Sharing
+- Achievements
