@@ -344,3 +344,31 @@ Future features:
 - Friends
 - Sharing
 - Achievements
+
+# Home Workout Philosophy
+
+Habitᵃᵗ Fitness is designed primarily for home workouts.
+
+The app should prioritize exercises that require:
+
+- No equipment
+- Minimal equipment
+- Affordable home equipment
+
+Supported equipment examples:
+
+- None
+- Yoga mat
+- Resistance bands
+- Dumbbells
+- Jump rope
+- Chair
+- Pull-up bar
+
+The app should avoid recommending exercises that require:
+
+- Commercial gym machines
+- Expensive specialized equipment
+- Hard-to-access facilities
+
+Workout generation should allow users to select available equipment and only recommend appropriate exercises.
