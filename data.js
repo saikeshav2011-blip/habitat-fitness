@@ -273,7 +273,7 @@ export const exerciseSubmissions = [];
 
 // SAVED WORKOUTS
 
-export const savedWorkouts = [];
+export let savedWorkouts = [];
 
 
 
