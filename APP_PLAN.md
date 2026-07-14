@@ -373,3 +373,21 @@ The app should avoid recommending exercises that require:
 
 Workout generation should allow users to select available equipment and only recommend appropriate exercises.
 
+# Multi-Platform Support
+
+Habitᵃᵗ Fitness will support both mobile and web platforms.
+
+Mobile focus:
+- Workout execution
+- Timers
+- Notifications
+- Lock screen workout guidance
+
+Web focus:
+- Workout planning
+- Exercise browsing
+- Workout management
+- Progress review
+
+The app should use a shared codebase whenever possible.
+
