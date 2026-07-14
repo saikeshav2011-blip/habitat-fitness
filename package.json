@@ -1,0 +1,14 @@
+{
+  "name": "habitat-fitness",
+  "version": "1.0.0",
+  "description": "Habitᵃᵗ Fitness interval workout timer app",
+  "main": "index.js",
+  "scripts": {
+    "start": "expo start"
+  },
+  "dependencies": {
+    "expo": "latest",
+    "react": "latest",
+    "react-native": "latest"
+  }
+}
