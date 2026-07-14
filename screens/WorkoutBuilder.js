@@ -8,13 +8,35 @@ import {
   ScrollView
 } from "react-native";
 
-import { publicExercises } from "../data";
+import { publicExercises, savedWorkouts } from "../data";
 
 
 export default function WorkoutBuilder() {
 
   const [workoutName, setWorkoutName] = useState("");
   const [selectedExercises, setSelectedExercises] = useState([]);
+
+  function saveWorkout(){
+
+  if(workoutName.trim() === ""){
+    return;
+  }
+
+
+  savedWorkouts.push({
+
+    id: Date.now(),
+
+    name: workoutName,
+
+    exercises: selectedExercises
+
+  });
+
+
+  console.log(savedWorkouts);
+
+}
 
 
   function addExercise(exercise) {
@@ -118,14 +140,16 @@ export default function WorkoutBuilder() {
 
 
 
-      <Pressable style={styles.saveButton}>
+    <Pressable
+  style={styles.saveButton}
+  onPress={saveWorkout}
+>
 
-        <Text style={styles.saveText}>
-          Save Workout
-        </Text>
+  <Text style={styles.saveText}>
+    Save Workout
+  </Text>
 
-      </Pressable>
-
+</Pressable>
 
     </ScrollView>
 
