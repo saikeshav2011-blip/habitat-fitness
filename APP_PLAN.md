@@ -372,3 +372,4 @@ The app should avoid recommending exercises that require:
 - Hard-to-access facilities
 
 Workout generation should allow users to select available equipment and only recommend appropriate exercises.
+
