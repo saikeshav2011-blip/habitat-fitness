@@ -1,81 +1,114 @@
-// Habitᵃᵗ Fitness App Data
+// Habitᵃᵗ Fitness Exercise Database
 
-export const exercises = [
+
+export const publicExercises = [
+
   {
     id: 1,
     name: "Jumping Jacks",
+
     muscles: [
       "Full Body",
       "Cardio"
     ],
+
+    categories: [
+      "HIIT",
+      "No Equipment",
+      "Beginner"
+    ],
+
+    equipment: [
+      "None"
+    ],
+
     difficulty: "Beginner",
+
     variations: [
       "Low Impact Jumping Jacks",
       "Star Jumps"
     ],
+
     description:
-      "A full-body movement that increases heart rate and improves coordination."
+      "A full body movement used to increase heart rate and improve coordination."
   },
+
 
   {
     id: 2,
     name: "Squats",
+
     muscles: [
       "Quadriceps",
       "Glutes",
       "Hamstrings"
     ],
-    difficulty: "Beginner",
-    variations: [
-      "Bodyweight Squat",
+
+    categories: [
+      "Strength",
+      "Lower Body",
+      "No Equipment"
+    ],
+
+    equipment:[
+      "None"
+    ],
+
+    difficulty:"Beginner",
+
+    variations:[
       "Jump Squat",
       "Split Squat"
     ],
+
     description:
-      "A lower-body exercise focused on leg strength and stability."
+      "A lower body exercise focused on leg strength and stability."
   },
 
+
   {
-    id: 3,
-    name: "Push-ups",
-    muscles: [
+    id:3,
+    name:"Push-ups",
+
+    muscles:[
       "Chest",
       "Shoulders",
       "Triceps",
       "Core"
     ],
-    difficulty: "Beginner",
-    variations: [
+
+    categories:[
+      "Strength",
+      "Upper Body",
+      "No Equipment"
+    ],
+
+    equipment:[
+      "None"
+    ],
+
+    difficulty:"Beginner",
+
+    variations:[
       "Knee Push-up",
       "Incline Push-up",
       "Diamond Push-up"
     ],
+
     description:
-      "An upper-body exercise that builds pushing strength."
+      "An upper body pushing movement that develops strength."
   }
+
 ];
 
 
-export const savedWorkouts = [
-  {
-    id: 1,
-    name: "Starter HIIT Workout",
-    exercises: [
-      {
-        exerciseId: 1,
-        workTime: 30,
-        restTime: 15
-      },
-      {
-        exerciseId: 2,
-        workTime: 45,
-        restTime: 15
-      },
-      {
-        exerciseId: 3,
-        workTime: 30,
-        restTime: 15
-      }
-    ]
-  }
-];
+
+// User-created exercises
+
+export const privateExercises = [];
+
+
+
+// Saved workouts
+
+export const savedWorkouts = [];
