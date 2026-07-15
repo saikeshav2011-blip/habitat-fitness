@@ -260,7 +260,7 @@ export const publicExercises = [
 // PRIVATE USER CREATED EXERCISES
 // Only visible to the user unless submitted and approved
 
-export const privateExercises = [];
+export let privateExercises = [];
 
 
 
